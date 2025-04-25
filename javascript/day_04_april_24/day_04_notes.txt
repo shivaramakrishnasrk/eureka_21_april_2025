@@ -49,7 +49,7 @@ var					✅ Yes				❌ Undefined			⚠️ Allowed but undefined
 let					✅ Yes				❌ No					❌ ReferenceError
 const				✅ Yes				❌ No					❌ ReferenceError
 Func Declaration	✅ Yes				✅ Yes					✅ Allowed
-Func Expression 	✅ Yes				❌ Undefined			    ❌ TypeError
+Func Expression 	No					 ❌ Undefined			    ❌ TypeError
 
 
 
