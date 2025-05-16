@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   templateUrl: './databinding.component.html',
-  styleUrl: './databinding.component.css'
+  // styles: ['h3 { color:red; }'],
+  styleUrl: './databinding.component.css',
 })
 export class DatabindingComponent {
   userName: string = 'Sachin Tendulkar';
@@ -26,5 +27,14 @@ export class DatabindingComponent {
   addResult: number = 0;
   addition(val1: string | number, val2: string | number) {
     this.addResult = +val1 + +val2;
+  }
+
+  toggleTheme() {
+    if (this.flag) { // Enable dark Mode
+      document.body.classList.remove('dark-mode')
+    } else {
+      document.body.classList.add('dark-mode')
+    }
+    this.flag = !this.flag;
   }
 }

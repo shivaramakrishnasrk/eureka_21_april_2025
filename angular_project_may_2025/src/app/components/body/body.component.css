@@ -1,3 +1,7 @@
 .body {
-    min-height: 300px;
+  min-height: 300px;
+}
+
+input {
+  border-radius: 10px;
 }
