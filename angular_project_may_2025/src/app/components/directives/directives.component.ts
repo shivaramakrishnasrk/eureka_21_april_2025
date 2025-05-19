@@ -25,4 +25,21 @@ export class DirectivesComponent {
     { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
     { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
   ];
+
+  myStyle1 = {
+    "color": 'red',
+    "border": "5px dotted green",
+  }
+  myStyle2 = {
+    "color": 'black',
+    "border": "5px dotted red",
+  }
+
+  myFunction() {
+    if (this.num % 2 == 0) {
+      return this.myStyle1;
+    } else {
+      return this.myStyle2;
+    }
+  }
 }
