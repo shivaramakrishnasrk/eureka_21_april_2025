@@ -14,7 +14,6 @@ import { MySortPipe } from '../../pipes/my-sort.pipe';
   ],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css',
-  standalone: true
 })
 export class PipesComponent {
   userName: string = 'Sachin tEnDuLKaR';
