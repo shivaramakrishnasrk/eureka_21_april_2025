@@ -1,0 +1,109 @@
+<h3 class="text-center">Let's Learn Pipes</h3>
+
+<div class="border border-5 p-2 m-2">
+  <div>lowercase, uppercase, Titlecase pipe</div>
+  <div><input [(ngModel)]="userName"></div>
+  <div>UserName: {{userName}}</div>
+  <div>UserName Uppercase: {{userName | uppercase}}</div>
+  <div>UserName Lowercase: {{userName | lowercase}}</div>
+  <div>UserName titlecase: {{userName | titlecase}}</div>
+</div>
+
+<div class="border border-5 p-2 m-2">
+  <div>currency pipe</div>
+  <div><input [(ngModel)]="salary" type="number"></div>
+  <div>Salary is: {{salary}}</div>
+  <div>Salary is: {{salary | currency}}</div>
+  <div>Salary is: {{salary | currency : 'USD' : 'code'}}</div>
+  <div>Salary is: {{salary | currency : 'USD' : 'symbol'}}</div>
+  <div>Salary is: {{salary | currency : 'INR'}}</div>
+  <!-- input | pipeName : argument -->
+  <div>Salary is: {{salary | currency : '&euro;'}}</div>
+  <div>Salary is: {{salary | currency : '&#20803;'}}</div>
+</div>
+
+<div class="border border-5 p-2 m-2">
+  <div>Date pipe</div>
+  <div> {{today}}</div>
+  <div> {{today | date}}</div>
+  <div> {{today | date : 'shortDate'}}</div>
+  <div> {{today | date : 'mediumDate'}}</div>
+  <div> {{today | date : 'longDate'}}</div>
+  <div> {{today | date : 'fullDate'}}</div>
+  <div> {{today | date : 'shortTime'}}</div>
+  <div> {{today | date : 'mediumTime'}}</div>
+  <div> {{today | date : 'longTime'}}</div>
+  <div> {{today | date : 'fullTime'}}</div>
+  <div> {{today | date : 'dd/MMM/yyyy'}}</div>
+</div>
+
+<div class="border border-5 p-2 m-2">
+  <div>Number & Percent pipe</div>
+
+  <div>{{ 12.111222333 | number: "3.2-5" }}</div>
+  <div>{{ 12.1 | number: "3.2-5" }}</div>
+  <div>{{ 0.5 | number:'3.2-5'}} </div>
+
+  <div>{{ 0.5 | percent}} </div>
+  <div>{{ 0.05 | percent}} </div>
+</div>
+
+<div class="border border-5 p-2 m-2">
+  <div>json pipe:</div>
+
+  <div>{{user}}</div>
+  <div>{{user | json}}</div>
+</div>
+<div class="border border-5 p-2 m-2 rounded-2">
+  <div>key-value pipe:</div>
+
+  @for(entry of user | keyvalue;track $index){
+  <div>{{entry.key}}---{{entry.value}}</div>
+  }
+</div>
+
+<div class="border border-5 p-2 m-2 rounded-2">
+  <div>Slice pipe:</div>
+  <div>{{numArr}}</div>
+  <div>{{numArr | slice : 2}}</div>
+  <div>{{numArr | slice : 2 : 4 }}</div>
+  <div>{{numArr | slice : 2 : -1 }}</div>
+</div>
+
+<div class="border border-5 p-2 m-2 rounded-2">
+  <div>Remaining Characters (Custom Pipe)</div>
+
+  <textarea [(ngModel)]="msg" maxlength="100"></textarea>
+  <div>Remaining Chars: {{msg | remaining : 100}}</div>
+
+  <textarea [(ngModel)]="msg2" maxlength="200"></textarea>
+  <div>Remaining Chars: {{msg2 | remaining : 200}}</div>
+</div>
+
+<div class="border border-5 p-2 m-2 rounded-2">
+  <div>Ordinal (Custom Pipe)</div>
+  <input type="number" [(ngModel)]="num" />
+  <div>Num value: {{num}}</div>
+  <!-- <div>Num value: {{num | ordinal}}</div> -->
+</div>
+
+<div class="border border-5 p-2 m-2 rounded-2">
+  <div>Need of Impure Pipe</div>
+
+  arr without sort:
+  @for (item of arr; track $index) {
+  <b>{{item}} &nbsp;</b>
+  }
+
+  <div>
+    arr2 with sort:
+    @for (item of arr2 | mySort; track $index) {
+    <b>{{item}} &nbsp;</b>
+    }
+
+    <div>
+      <input type="number" #newEle />
+      <button class="btn btn-primary" (click)="arr2.push(+newEle.value)">Add</button>
+    </div>
+  </div>
+</div>
