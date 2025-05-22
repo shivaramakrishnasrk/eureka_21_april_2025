@@ -1,0 +1,78 @@
+<h3 class="text-center">Lets learn pipes</h3>
+<hr/>
+
+<div class ="border p-2 m-2">
+    <div class="border p-2 m-2">
+  <div>lowercase, uppercase, Titlecase pipe</div>
+  <div><input [(ngModel)]="userName"></div>
+  <div>UserName: {{userName}}</div>
+  <div>UserName Uppercase: {{userName | uppercase}}</div>
+  <div>UserName Lowercase: {{userName | lowercase}}</div>
+
+  <div>salary : {{salary}}</div>
+  <div>salary currency: {{salary | currency}}</div>
+  <div>salary currency in INR: {{salary | currency : 'INR'}}</div>
+  <div>salary currency in EUROS: {{salary | currency : '&euro;'}}</div>
+</div>
+<div> 
+    <div>date pipes</div>   
+    <div>{{today| date}}</div>
+    <div><{{today|date: 'shortdate'}}/div>  
+        <div>{{today|date:'mediumDate'}}</div>
+        <div>{{today| date: 'longDate'}}</div>  
+        <div>{{today|date: 'fullDate'}}</div>
+</div>
+
+<div>
+    <div>numer & percent pipes</div>
+    <div>{{12.11122233| number:"3.25"}}</div>  
+    <div>{{12.1|number:"3.45"}}</div> 
+    <div>{{0.5| number:"4.35"}}</div>   
+    <div>{{0.5| percent}}</div>
+
+</div>
+<div>
+    <div>json pipes</div>
+    @for( entry of user | keyvalue; track $index){
+        <div>{{entry.key}}--{{entry.value}}</div>
+    }
+</div>
+<div>remaining characters</div>
+<textarea [(ngModel)]= 'msg' maxlength="100"></textarea>
+<div>msg:{{msg}}</div>  
+</div>
+
+<div>
+    <div>ordinal(custom pipe)</div> 
+    <input type="number" [(ngModel)]="num"/>
+    <div>Num value:{{num}}</div>
+</div>
+
+<div>need of impure pipes</div>
+<div>
+    @for(item of arr; track $index)
+    {
+        <b>{{item}}&nbsp;</b>
+    }
+</div>
+<div>
+    arr2 with sort:
+    @for(item of arr2| mySort; track $index)
+    {
+        <b>{{item}}&nbsp;</b>
+    }
+</div>
+
+<div>ordinal of any number you input by custom pipe ordinal</div>
+<input type="number" [(ngModel)]="ordinal">
+<div>num value:{{ordinal|ordinal}}</div>
+
+<div>i will give the roman of any number by custom pipe roman</div>
+<input type="number" [(ngModel)]="romaninput">
+<div>roman number:{{romaninput|roman}}</div>
+
+<div>enter dob in yyyy-mm-dd format to calculate age</div>
+<input type="text" [(ngModel)="date"]>
+<div>age:{{age|age}}</div>
+
+
