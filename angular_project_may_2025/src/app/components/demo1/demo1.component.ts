@@ -10,6 +10,18 @@ import { EMPLOYEE_ADDED_MESSAGE } from '../../constants/message_constants';
   styleUrl: './demo1.component.css'
 })
 export class Demo1Component {
+  myTimer: any;
+
+  constructor() {
+    this.myTimer = setInterval(() => {
+      console.log("I am Message From Demo-1")
+    }, 1000);
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.myTimer);
+  }
+
   openAlert() {
     Swal.fire('Good job!', 'You clicked the button!', 'success');
   }

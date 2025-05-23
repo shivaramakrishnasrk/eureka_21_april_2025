@@ -8,11 +8,11 @@ export class HighlightDirective {
   constructor(private ele: ElementRef) { // Dependency Injection
     console.log(ele);                    // creating instance of ElementRef Class
   }
-  @HostListener('mouseenter') 
+  @HostListener('mouseenter')
   onMouseEnter() {
     this.highlight('yellow', 'red');
   }
-  @HostListener('mouseleave') 
+  @HostListener('mouseleave')
   onMouseLeave() {
     this.highlight('', '');
   }

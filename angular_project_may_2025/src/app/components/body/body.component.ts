@@ -6,6 +6,8 @@ import { MyModalComponent } from '../my-modal/my-modal.component';
 import { Demo1Component } from '../demo1/demo1.component';
 import { PipesComponent } from '../pipes/pipes.component';
 import { ParentComponent } from '../parent/parent.component';
+import { TrafficLightComponent } from '../traffic-light/traffic-light.component';
+import { Demo2Component } from '../demo2/demo2.component';
 
 @Component({
   selector: 'app-body',
@@ -14,13 +16,15 @@ import { ParentComponent } from '../parent/parent.component';
     // DirectivesComponent
     // ProductsComponent
     // MyModalComponent
-    // Demo1Component
+    // Demo1Component,
+    // Demo2Component
     // PipesComponent
+    // TrafficLightComponent,
     ParentComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css',
 })
 export class BodyComponent {
-
+  flag:boolean = true;
 }
