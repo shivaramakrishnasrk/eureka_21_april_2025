@@ -6,6 +6,7 @@ import { MySortPipe } from '../../pipes/my-sort.pipe';
 import { OrdinalPipe } from '../../pipes/ordinal.pipe';
 import { RomanPipe } from '../../pipes/roman.pipe';
 import { AgePipe } from '../../pipes/age.pipe';
+import { SalutationPipe } from '../../pipes/salutation.pipe';
 
 
 
@@ -13,7 +14,7 @@ import { AgePipe } from '../../pipes/age.pipe';
 
 @Component({
   selector: 'app-pipes',
-  imports: [ CommonModule, FormsModule, MySortPipe,OrdinalPipe,RomanPipe,AgePipe],
+  imports: [ CommonModule, FormsModule, MySortPipe,OrdinalPipe,RomanPipe,AgePipe,SalutationPipe],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css'
 })
@@ -33,4 +34,11 @@ arr2=[10,30,20,70,15];
 ordinal: any;
 romaninput: any;
 age:any;
+
+employees = [
+  { name: 'John', gender: 'Male', age: 30 },
+  { name: 'Alice', gender: 'Female', age: 25 },
+  { name: 'Bob', gender: 'Male', age: 35 },
+  { name: 'Emily', gender: 'Female', age: 28 },
+];
 }

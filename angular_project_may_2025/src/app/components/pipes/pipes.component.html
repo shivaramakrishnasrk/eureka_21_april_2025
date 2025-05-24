@@ -71,8 +71,17 @@
 <input type="number" [(ngModel)]="romaninput">
 <div>roman number:{{romaninput|roman}}</div>
 
+<br>
+
 <div>enter dob in yyyy-mm-dd format to calculate age</div>
-<input type="text" [(ngModel)="date"]>
+<input type="text" [(ngModel)]="age">
 <div>age:{{age|age}}</div>
+
+<div>
+    Employee Salutation:
+    <li *ngFor="let item of employees | salutation; let i = index">
+        <b>{{ item}}</b> ({{ item })
+      </li>
+</div>
 
 
