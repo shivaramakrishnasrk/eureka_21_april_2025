@@ -8,6 +8,8 @@ import { PipesComponent } from '../pipes/pipes.component';
 import { ParentComponent } from '../parent/parent.component';
 import { TrafficLightComponent } from '../traffic-light/traffic-light.component';
 import { Demo2Component } from '../demo2/demo2.component';
+import { Math1Component } from '../math1/math1.component';
+import { Math2Component } from '../math2/math2.component';
 
 @Component({
   selector: 'app-body',
@@ -20,7 +22,9 @@ import { Demo2Component } from '../demo2/demo2.component';
     // Demo2Component
     // PipesComponent
     // TrafficLightComponent,
-    ParentComponent
+    // ParentComponent
+    Math1Component,
+    Math2Component
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css',
