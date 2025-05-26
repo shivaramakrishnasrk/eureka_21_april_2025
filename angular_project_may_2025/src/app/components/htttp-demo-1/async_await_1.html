@@ -1,0 +1,10 @@
+<script>
+
+    async function fetchData(){
+    user_url="https://jsonplaceholder.typicode.com/users";
+    let response= await fetch(user_url);
+    let finalResponse= await response.json();
+    console.log(finalResponse);
+    }
+    fetchData();
+</script>
